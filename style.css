@@ -24,6 +24,7 @@ body {
   /* padding-top: 1rem; */
   margin: 1rem 0;
   display: block;
+  height: fit-content;
   /* border: 1px solid red; */
 }
 
@@ -37,7 +38,7 @@ header {
   height: 0.5rem;
   width: 2.2rem;
   background-color: var(--base-color);
-  animation: line .5s linear -1ms;
+  animation: line .8s linear -1ms;
   overflow: hidden;
 }
 
@@ -45,7 +46,8 @@ header {
   font-family: Montserrat;
   color: var(--base-color);
   overflow: hidden;
-  animation: type 2s 1ms;
+  /* transition: 2s; */
+  /* animation: type 3s 1ms; */
   white-space: nowrap;
   width: fit-content;
 }
@@ -72,6 +74,31 @@ nav li {
   /* border: 1px dashed blue; */
 }
 
+/* MENU */
+#menu {
+  display: none;
+}
+
+#first, #second, #third {
+  background-color: var(--base-color);
+  width: 40px;
+  margin: 7px 0;
+  height: 3px;
+  transition: .5s;
+}
+
+.change #first {
+  transform: translate(0, 10px) rotate(-45deg);
+}
+
+.change #second {
+  opacity: 0;
+}
+
+.change #third {
+  transform: translate(0, -10px) rotate(45deg);
+}
+
 /* transition a line under the nav items */
 nav li::after {
   display: flex;
@@ -91,6 +118,7 @@ nav li a {
   text-decoration: none;
   color: white;
 }
+
 
 /* Homepage of the website */
 #my_intro {
@@ -139,12 +167,35 @@ span {
   /* transition: all 1s ease-in; */
 }
 
+/* Socials */
+#socials {
+  margin-top: 1rem;
+}
+
+#socials ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#socials ul li {
+  list-style: none;
+  padding-right: 1rem;
+}
+
+#socials ul li a svg:hover {
+  stroke: var(--base-color);
+}
+
+
 /* media queries */
 @media screen and (max-width: 900px) {
   #nav_links {
     display: none;
   }
-
+  #menu {
+    display: block;
+    cursor: pointer;
+  }
   #profile_pic {
     width: 50vw;
   }
