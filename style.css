@@ -19,18 +19,6 @@ body {
   /* border: 0.5px solid blue; */
 }
 
-/* Transitions */
-/* for the logo line */
-@keyframes line {
-  from {width: 0rem;}
-  to {width: 2.2rem;}
-}
-
-@keyframes navigate {
-  from {width: 0%;}
-  to {width: 100%;}
-}
-
 /* Heading of the website */
 #my_header {
   /* padding-top: 1rem; */
@@ -45,46 +33,61 @@ header {
   align-items: center;
 }
 
-#logo {
-  /* height: 2.5rem; */
-}
-
 #logo #design {
   height: 0.5rem;
   width: 2.2rem;
   background-color: var(--base-color);
-  animation-name: line;
-  animation-delay: -1ms;
-  animation-duration: 1s;
-  animation-timing-function: linear;
+  animation: line .5s linear -1ms;
+  overflow: hidden;
 }
 
 #logo h1 {
   font-family: Montserrat;
   color: var(--base-color);
+  overflow: hidden;
+  animation: type 2s 1ms;
+  white-space: nowrap;
+  width: fit-content;
 }
 
-nav ul {
+#nav_links {
+  width: fit-content;
+}
+
+nav {
+  width: 500px;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav li {
+  /* flex: 0; */
+  list-style: none;
+  padding: 1rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  width: 5rem;
+  text-align: center;
   /* border: 1px dashed blue; */
 }
 
-nav ul li {
-  list-style: none;
-  padding: 1rem;
-  font-weight: 500;
-  font-size: 1rem;
-  /* width: fit-content; */
+/* transition a line under the nav items */
+nav li::after {
+  display: flex;
+  content: '';
+  width: 0rem;
+  height: .4rem;
+  transition: all 1s ease;
 }
 
-nav ul li:hover {
+nav li:hover::after {
+  cursor: pointer;
+  width: 100%;
   background-color: var(--base-color);
-  /* animation-name: navigate;
-  animation-duration: 2s; */
 }
 
-nav ul li a {
+nav li a {
   text-decoration: none;
   color: white;
 }
@@ -106,6 +109,7 @@ nav ul li a {
   /* border: 1px solid red; */
   width: fit-content;
   height: fit-content;
+  /* transition: all 2s ease-in-out; */
 }
 
 #introduction h1 {
@@ -132,14 +136,15 @@ span {
   align-items: center;
   background-color: var(--base-color);
   border-radius: 11rem 19rem;
+  /* transition: all 1s ease-in; */
 }
 
 /* media queries */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   #nav_links {
     display: none;
   }
-  
+
   #profile_pic {
     width: 50vw;
   }
@@ -149,10 +154,32 @@ span {
   #my_intro {
     flex-direction: column;
   }
+
   #introduction h1 {
     font-size: 2rem;
   }
+
   #introduction h2 {
     font-size: 1.5rem;
   }
+}
+
+/* Transitions */
+/* for the logo line */
+@keyframes line {
+  from {
+    width: 0rem;
+  }
+
+  to {
+    width: 2.2rem;
+  }
+}
+
+/* to type out words */
+@keyframes type {
+  from {
+    width: 0;
+  }
+  /* to {width: 100%;} */
 }
