@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: Roboto;
+  font-family: Montserrat;
   background-color: black;
   color: white;
 }
@@ -15,6 +15,20 @@ body {
 
 .homepage {
   padding: 0 3rem;
+  height: 100vh;
+  /* border: 0.5px solid blue; */
+}
+
+/* Transitions */
+/* for the logo line */
+@keyframes line {
+  from {width: 0rem;}
+  to {width: 2.2rem;}
+}
+
+@keyframes navigate {
+  from {width: 0%;}
+  to {width: 100%;}
 }
 
 /* Heading of the website */
@@ -32,42 +46,113 @@ header {
 }
 
 #logo {
-  height: 2.5rem;
+  /* height: 2.5rem; */
 }
 
-nav {
+#logo #design {
+  height: 0.5rem;
+  width: 2.2rem;
+  background-color: var(--base-color);
+  animation-name: line;
+  animation-delay: -1ms;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+#logo h1 {
+  font-family: Montserrat;
+  color: var(--base-color);
+}
+
+nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   /* border: 1px dashed blue; */
 }
 
-nav li {
+nav ul li {
   list-style: none;
   padding: 1rem;
   font-weight: 500;
   font-size: 1rem;
-  width: fit-content;
+  /* width: fit-content; */
 }
 
-nav li:hover {
+nav ul li:hover {
   background-color: var(--base-color);
-  cursor: pointer;
+  /* animation-name: navigate;
+  animation-duration: 2s; */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 /* Homepage of the website */
+#my_intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid red; */
+  height: fit-content;
+  width: inherit;
+  margin-top: 5rem;
+}
+
+#introduction {
+  margin: 1rem;
+  /* border: 1px solid red; */
+  width: fit-content;
+  height: fit-content;
+}
+
+#introduction h1 {
+  font-size: 3rem;
+}
+
+#introduction h2 {
+  font-size: 2rem;
+}
+
 span {
   color: var(--base-color);
 }
 
-
 #profile_pic {
-  width: 20rem;
+  width: 25rem;
+}
+
+#profile_pic_bg {
+  display: flex;
+  /* border: 1px solid red; */
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--base-color);
+  border-radius: 11rem 19rem;
 }
 
 /* media queries */
-
 @media screen and (max-width: 800px) {
   #nav_links {
     display: none;
+  }
+  
+  #profile_pic {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #my_intro {
+    flex-direction: column;
+  }
+  #introduction h1 {
+    font-size: 2rem;
+  }
+  #introduction h2 {
+    font-size: 1.5rem;
   }
 }
