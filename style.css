@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.homepage {
+  padding: 0 3rem;
+}
+
+/* Heading of the website */
+#my_header {
+  /* padding-top: 1rem; */
+  margin: 1rem 0;
+  display: block;
+  border: 1px solid red;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  height: 2.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: 1px dashed blue;
+}
+
+nav li {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+/* Homepage of the website */
+span {
+  color: #434BE7;
+}
+
+
+#profile_pic {
+  width: 20rem;
+}
+
+/* media queries */
+
+@media screen and (max-width: 800px) {
+  #nav_links {
+    display: none;
+  }
+}
