@@ -4,8 +4,13 @@
 }
 
 body {
+  font-family: Roboto;
   background-color: black;
   color: white;
+}
+
+:root {
+  --base-color: #434BE7;
 }
 
 .homepage {
@@ -17,7 +22,7 @@ body {
   /* padding-top: 1rem; */
   margin: 1rem 0;
   display: block;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 header {
@@ -33,17 +38,25 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
-  border: 1px dashed blue;
+  /* border: 1px dashed blue; */
 }
 
 nav li {
   list-style: none;
-  padding-left: 1rem;
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  width: fit-content;
+}
+
+nav li:hover {
+  background-color: var(--base-color);
+  cursor: pointer;
 }
 
 /* Homepage of the website */
 span {
-  color: #434BE7;
+  color: var(--base-color);
 }
 
 
