@@ -190,13 +190,19 @@ span {
 #about_section {
   margin: 1rem 0;
   padding: 0 1rem;
-  border-radius: 12rem 6rem;
-  background-color: white;
+  /* border: 1px solid red; */
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50vh;
+  width: inherit;
+}
+
+#about {
+  /* border: 1px solid blue; */
+  width: 50rem;
+  height: fit-content;
+  text-align: center;
 }
 
 #about_section h1 {
@@ -204,8 +210,8 @@ span {
 }
 
 #about_section p {
-  text-align: center;
-  color: black;
+  /* text-align: center; */
+  /* color: black; */
 }
 
 /* media queries */
