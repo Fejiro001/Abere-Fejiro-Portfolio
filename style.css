@@ -120,7 +120,7 @@ nav li a {
 }
 
 
-/* Homepage of the website */
+/* Intro of the website */
 #my_intro {
   display: flex;
   flex-direction: row;
@@ -186,6 +186,27 @@ span {
   stroke: var(--base-color);
 }
 
+/* About Me Section */
+#about_section {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  border-radius: 12rem 6rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#about_section h1 {
+  color: var(--base-color);
+}
+
+#about_section p {
+  text-align: center;
+  color: black;
+}
 
 /* media queries */
 @media screen and (max-width: 900px) {
