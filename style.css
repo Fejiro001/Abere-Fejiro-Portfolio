@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Montserrat;
   background-color: black;
@@ -15,8 +19,9 @@ body {
 
 .homepage {
   padding: 0 3rem;
-  height: 100vh;
-  /* border: 0.5px solid blue; */
+  height: 100%;
+  width: inherit;
+  border: 0.5px solid blue;
 }
 
 /* Heading of the website */
@@ -38,7 +43,7 @@ header {
   height: 0.5rem;
   width: 2.2rem;
   background-color: var(--base-color);
-  animation: line .8s linear -1ms;
+  animation: line 1s linear -1ms;
   overflow: hidden;
 }
 
@@ -154,6 +159,7 @@ span {
 
 #profile_pic {
   width: 25rem;
+  /* transition: all 1s; */
 }
 
 #profile_pic_bg {
@@ -164,7 +170,6 @@ span {
   align-items: center;
   background-color: var(--base-color);
   border-radius: 11rem 19rem;
-  /* transition: all 1s ease-in; */
 }
 
 /* Socials */
@@ -182,36 +187,47 @@ span {
   padding-right: 1rem;
 }
 
-#socials ul li a svg:hover {
+#socials ul li div svg:hover {
+  cursor: pointer;
   stroke: var(--base-color);
 }
 
 /* About Me Section */
 #about_section {
-  margin: 1rem 0;
+  margin: 5rem 0;
   padding: 0 1rem;
-  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
-  width: inherit;
+  height: fit-content;
+  /* width: inherit; */
+  /* border: 1px solid red; */
 }
 
 #about {
   /* border: 1px solid blue; */
-  width: 50rem;
-  height: fit-content;
+  width: 60rem;
+  height: inherit;
   text-align: center;
+  padding: 0 1rem;
+  border-left: 5px solid var(--base-color);
+  border-right: 5px solid var(--base-color);
 }
 
-#about_section h1 {
+#about h1 {
   color: var(--base-color);
 }
 
-#about_section p {
-  /* text-align: center; */
-  /* color: black; */
+#about p {
+  font-size: 1.5rem;
+}
+
+#about p #resume {
+  font-weight: 600;
+}
+
+#about p #resume:hover {
+  cursor: pointer;
 }
 
 /* media queries */
@@ -235,6 +251,10 @@ span {
 
   #introduction h1 {
     font-size: 2rem;
+  }
+
+  #about p {
+    font-size: 1rem;
   }
 
   #introduction h2 {
