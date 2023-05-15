@@ -1,16 +1,19 @@
-* {
-  margin: 0;
-  padding: 0;
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: Montserrat;
   background-color: black;
   color: white;
+  /* padding: 0 3rem; */
 }
 
 :root {
@@ -18,23 +21,28 @@ body {
 }
 
 .homepage {
-  padding: 0 3rem;
   height: 100%;
-  width: inherit;
-  border: 0.5px solid blue;
+  width: 100%;
+  /* border: 0.5px solid blue; */
 }
 
 /* Heading of the website */
 #my_header {
-  /* padding-top: 1rem; */
-  margin: 1rem 0;
+  padding-top: 1rem;
+  /* margin: 1rem 0; */
   display: block;
   height: fit-content;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
   /* border: 1px solid red; */
 }
 
 header {
+  padding: 0 1.5rem;
   display: flex;
+  width: inherit;
   justify-content: space-between;
   align-items: center;
 }
@@ -74,9 +82,43 @@ nav li {
   padding: 1rem;
   margin-left: 0.5rem;
   font-size: 1rem;
-  width: 5rem;
-  text-align: center;
+  width: fit-content;
+  /* text-align: center; */
   /* border: 1px dashed blue; */
+}
+
+/* transition a line under the nav items */
+nav li::after {
+  display: flex;
+  content: '';
+  width: 0%;
+  height: .2rem;
+  transition: all 1s ease;
+}
+
+nav li::before {
+  display: flex;
+  content: '';
+  width: 0%;
+  height: .2rem;
+  transition: all 1s ease;
+}
+
+nav li:hover::after {
+  cursor: pointer;
+  width: 100%;
+  background-color: var(--base-color);
+}
+
+nav li:hover::before {
+  cursor: pointer;
+  width: 100%;
+  background-color: var(--base-color);
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
 }
 
 /* MENU */
@@ -104,26 +146,6 @@ nav li {
   transform: translate(0, -10px) rotate(45deg);
 }
 
-/* transition a line under the nav items */
-nav li::after {
-  display: flex;
-  content: '';
-  width: 0rem;
-  height: .4rem;
-  transition: all 1s ease;
-}
-
-nav li:hover::after {
-  cursor: pointer;
-  width: 100%;
-  background-color: var(--base-color);
-}
-
-nav li a {
-  text-decoration: none;
-  color: white;
-}
-
 
 /* Intro of the website */
 #my_intro {
@@ -134,7 +156,7 @@ nav li a {
   /* border: 1px solid red; */
   height: fit-content;
   width: inherit;
-  margin-top: 5rem;
+  padding-top: 8rem;
 }
 
 #introduction {
@@ -155,10 +177,12 @@ nav li a {
 
 span {
   color: var(--base-color);
+  animation: fejiro 3s linear;
 }
 
 #profile_pic {
   width: 25rem;
+  border-radius: 0 0 9rem 16rem;
   /* transition: all 1s; */
 }
 
@@ -168,7 +192,8 @@ span {
   margin: 1rem;
   justify-content: center;
   align-items: center;
-  background-color: var(--base-color);
+  border: 8px dotted var(--base-color);
+  /* background-color: var(--base-color); */
   border-radius: 11rem 19rem;
 }
 
@@ -194,8 +219,7 @@ span {
 
 /* About Me Section */
 #about_section {
-  margin: 5rem 0;
-  padding: 0 1rem;
+  padding: 10rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -260,6 +284,10 @@ span {
   #introduction h2 {
     font-size: 1.5rem;
   }
+
+  #about_section {
+    padding: 5rem 1rem;
+  }
 }
 
 /* Transitions */
@@ -280,4 +308,13 @@ span {
     width: 0;
   }
   /* to {width: 100%;} */
+}
+
+@keyframes fejiro {
+  from {
+    color: black;
+  }
+  to {
+    color: var(--base-color);
+  }
 }
