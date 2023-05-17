@@ -26,13 +26,13 @@ body {
   /* border: 0.5px solid blue; */
 }
 
-/* Heading of the website */
+/* Navigation bar of the website */
 #my_header {
   padding-top: 1rem;
   /* margin: 1rem 0; */
   display: block;
   height: fit-content;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background-color: black;
@@ -78,6 +78,7 @@ nav {
 
 nav li {
   /* flex: 0; */
+  cursor: pointer;
   list-style: none;
   padding: 1rem;
   margin-left: 0.5rem;
@@ -121,7 +122,7 @@ nav li a {
   color: white;
 }
 
-/* MENU */
+/* Hamburger menu */
 #menu {
   display: none;
 }
@@ -146,6 +147,15 @@ nav li a {
   transform: translate(0, -10px) rotate(45deg);
 }
 
+/* Overlay navigation */
+#nav_column {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: rgba(146, 23, 23, 0.274);
+  overflow-y: hidden;
+}
 
 /* Intro of the website */
 #my_intro {
@@ -195,6 +205,7 @@ span {
   border: 8px dotted var(--base-color);
   /* background-color: var(--base-color); */
   border-radius: 11rem 19rem;
+  transform: translate();
 }
 
 /* Socials */
@@ -224,6 +235,7 @@ span {
   justify-content: center;
   align-items: center;
   height: fit-content;
+  transition: all 5s linear;
   /* width: inherit; */
   /* border: 1px solid red; */
 }
@@ -270,7 +282,7 @@ span {
 
 @media screen and (max-width: 700px) {
   #my_intro {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   #introduction h1 {

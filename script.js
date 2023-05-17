@@ -3,9 +3,16 @@ var github = document.getElementById("github");
 var linkedin = document.getElementById("linkedin");
 var twitter = document.getElementById("twitter");
 var resume = document.getElementById("resume");
+var logo = document.getElementById("logo");
+var nav = document.getElementById("nav_column")
+var about_section = document.getElementById("about_section");
+
 
 function toggleFunction() {
   menu.classList.toggle("change")
+  // nav.style.display = "block"
+  // nav.classList.add("nav_column")
+  // nav.classList.remove("logo")
 }
 
 function gitHub() {
