@@ -6,8 +6,10 @@ var resume = document.getElementById("resume");
 var logo = document.getElementById("logo");
 var nav = document.getElementById("nav_column")
 var about_section = document.getElementById("about_section");
+var theme = document.getElementById("theme");
 
 
+// hamburger menu
 function toggleFunction() {
   menu.classList.toggle("change")
   // nav.style.display = "block"
@@ -29,4 +31,9 @@ function twitTer() {
 
 function reSume() {
   resume.onclick = window.open("https://drive.google.com/file/d/16ua7cmVPR2ziV_b3nAHqhC6yRlNkN_5c/view?usp=sharing")
+}
+
+// change theme of website
+function changeTheme() {
+  // theme.image.src = "icons\moon.svg"
 }
