@@ -61,20 +61,57 @@ h6 {
   overflow-wrap: break-word;
 }
 
+/* LIGHT MODE */
+/* DARK MODE */
+/* BREAKPOINTS */
+/* PADDINGS */
 .logo-container .logo {
   font-family: "Dosis", serif;
   font-weight: 800;
 }
 
-/* LIGHT MODE */
-/* DARK MODE */
-/* BREAKPOINTS */
+.nav-links a, .aside__links a {
+  color: hsl(237, 88%, 10%);
+  font-family: "Dosis", serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: clamp(1.2rem, 1.5vw, 5rem);
+}
+
+header {
+  padding: clamp(1rem, 2vw, 2rem) 3rem;
+}
+header section {
+  padding-top: 10rem;
+}
+
+.introduction h1 {
+  font-family: "Dosis", serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 10vw, 5rem);
+  text-transform: uppercase;
+  -webkit-text-stroke: 3px hsl(237, 88%, 10%);
+  color: transparent;
+}
+.introduction h1 span {
+  -webkit-text-stroke: transparent;
+  color: hsl(228, 70%, 50%);
+}
+.introduction p {
+  font-family: "Chivo", serif;
+  font-size: clamp(1.3rem, 4vw, 2rem);
+}
+
+nav {
+  position: relative;
+}
+
+/* NAVIGATION */
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: clamp(1rem, 2vw, 2rem) 3rem;
 }
 
 .logo-container {
@@ -101,21 +138,23 @@ h6 {
   list-style: none;
   margin-left: 3rem;
 }
-.nav-links a {
-  color: hsl(237, 88%, 10%);
-  font-family: "Dosis", serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: clamp(1.2rem, 1.5vw, 5rem);
-}
-
 .aside {
+  position: absolute;
+  background-color: hsl(0, 0%, 100%);
   display: none;
   width: 100%;
-  background-color: gray;
-  animation: slidein var(--time) forwards;
 }
-
+.aside__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem;
+  gap: 3rem;
+}
+.aside__links li {
+  list-style: none;
+}
 @keyframes slidein {
   from {
     height: 0;
@@ -126,26 +165,6 @@ h6 {
 }
 .aside.show {
   display: block;
-}
-
-.aside .side-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 3rem 1rem;
-  gap: 2rem;
-}
-
-.aside .side-links li {
-  list-style: none;
-}
-
-.aside .side-links li a {
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 2rem;
 }
 
 @media (min-width: 800px) {
@@ -169,28 +188,23 @@ h6 {
   height: 20px;
   cursor: pointer;
 }
-
-.line {
+.hamburger-menu .line {
   width: 100%;
-  height: 3px;
-  background-color: hsl(248, 100%, 6%);
-  transition: 400ms ease-in-out;
+  height: 4px;
+  background-color: hsl(237, 88%, 10%);
+  transition: 300ms ease-in-out;
 }
-
 .hamburger-menu.active .line:nth-child(1) {
   transform: rotate(45deg);
   transform-origin: 10% 50%;
 }
-
 .hamburger-menu.active .line:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger-menu.active .line:nth-child(3) {
   transform: rotate(-45deg);
   transform-origin: 10% 50%;
 }
-
 @media (min-width: 800px) {
   .hamburger-menu {
     display: none;

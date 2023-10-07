@@ -1,4 +1,5 @@
 @use '../base/' as *;
+@use './variables' as *;
 
 %headings {
     font-family: $ff-headings;
@@ -13,4 +14,12 @@
 %paragraphs {
     font-family: $ff-paragraphs;
     font-weight: 400;
+}
+
+%nav-links {
+    color: $text-color;
+    font-family: $ff-headings;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: $nav-links-size;
 }
