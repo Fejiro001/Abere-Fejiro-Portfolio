@@ -1,0 +1,32 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+header {
+    padding: $nav-vertical-pad $nav-horizontal-pad;
+
+    section {
+        padding-top: 10rem;
+        // background-color: rgba(255, 0, 0, 0.233);
+    }
+}
+
+.introduction {
+    h1 {
+        font-family: $ff-headings;
+        font-weight: 800;
+        font-size: clamp(3rem, calc(5 / 50 * 100vw), 5rem);
+        text-transform: uppercase;
+        -webkit-text-stroke: 3px $text-color;
+        color: transparent;
+
+        span {
+            -webkit-text-stroke: transparent;
+            color: $accent-color;
+        }
+    }
+
+    p {
+        font-family: $ff-paragraphs;
+        font-size: clamp(1.3rem, calc(2/50 * 100vw), 2rem);
+    }
+}
