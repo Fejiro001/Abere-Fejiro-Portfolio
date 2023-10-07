@@ -1,0 +1,16 @@
+@use '../base/' as *;
+
+%headings {
+    font-family: $ff-headings;
+    font-weight: 800;
+}
+
+%sub-headings {
+    font-family: $ff-headings;
+    font-weight: 700;
+}
+
+%paragraphs {
+    font-family: $ff-paragraphs;
+    font-weight: 400;
+}
