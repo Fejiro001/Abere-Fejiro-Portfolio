@@ -65,24 +65,24 @@ h6 {
 /* DARK MODE */
 /* BREAKPOINTS */
 /* PADDINGS */
-.aboutme article h2, .logo-container .logo {
-  font-family: "Dosis", serif;
+.aboutme article h2, .logo-container .logo, .introduction h1 {
+  font-family: "Dosis", sans-serif;
   font-weight: 800;
 }
 
 .aboutme article h3 {
-  font-family: "Dosis", serif;
+  font-family: "Dosis", sans-serif;
   font-weight: 700;
 }
 
-.aboutme article p {
-  font-family: "Chivo", serif;
+.aboutme article p, .introduction p {
+  font-family: "Chivo", sans-serif;
   font-weight: 400;
 }
 
 .nav-links a, .aside__links a {
   color: hsl(237, 88%, 10%);
-  font-family: "Dosis", serif;
+  font-family: "Dosis", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   font-size: clamp(1.2rem, 1.5vw, 5rem);
@@ -96,8 +96,6 @@ header section {
 }
 
 .introduction h1 {
-  font-family: "Dosis", serif;
-  font-weight: 800;
   font-size: clamp(3rem, 10vw, 5rem);
   text-transform: uppercase;
   -webkit-text-stroke: 3px hsl(237, 88%, 10%);
@@ -108,7 +106,6 @@ header section {
   color: hsl(228, 70%, 50%);
 }
 .introduction p {
-  font-family: "Chivo", serif;
   font-size: clamp(1.3rem, 4vw, 2rem);
 }
 

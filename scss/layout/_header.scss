@@ -12,8 +12,7 @@ header {
 
 .introduction {
     h1 {
-        font-family: $ff-headings;
-        font-weight: 800;
+        @extend %headings;
         font-size: clamp(3rem, calc(5 / 50 * 100vw), 5rem);
         text-transform: uppercase;
         -webkit-text-stroke: 3px $text-color;
@@ -26,7 +25,7 @@ header {
     }
 
     p {
-        font-family: $ff-paragraphs;
+        @extend %paragraphs;
         font-size: clamp(1.3rem, calc(2/50 * 100vw), 2rem);
     }
 }
