@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+.call-to-action {
+    text-transform: uppercase;
+    color: $bg-color;
+    @extend %headings;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    background-color: $accent-color;
+    border: transparent;
+    padding: 1rem 0;
+    text-align: center;
+    width: clamp(10rem, calc(10 / 50 * 100vw), 10rem);
+    cursor: pointer;
+}

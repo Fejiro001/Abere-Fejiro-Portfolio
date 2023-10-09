@@ -65,7 +65,7 @@ h6 {
 /* DARK MODE */
 /* BREAKPOINTS */
 /* PADDINGS */
-.aboutme article h2, .logo-container .logo, .introduction h1 {
+.aboutme article h2, .logo-container .logo, .introduction h1, .call-to-action {
   font-family: "Dosis", sans-serif;
   font-weight: 800;
 }
@@ -88,18 +88,37 @@ h6 {
   font-size: clamp(1.2rem, 1.5vw, 5rem);
 }
 
+.call-to-action {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: hsl(228, 70%, 50%);
+  border: transparent;
+  padding: 1rem 0;
+  text-align: center;
+  width: clamp(10rem, 20vw, 10rem);
+  cursor: pointer;
+}
+
 header {
   padding: clamp(1rem, 2vw, 2rem) 3rem;
 }
 header section {
-  padding-top: 10rem;
+  padding-top: 6rem;
 }
 
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .introduction h1 {
   font-size: clamp(3rem, 10vw, 5rem);
   text-transform: uppercase;
   -webkit-text-stroke: 3px hsl(237, 88%, 10%);
   color: transparent;
+  line-height: 1.2;
 }
 .introduction h1 span {
   -webkit-text-stroke: transparent;
@@ -258,7 +277,7 @@ main {
   font-size: 2rem;
 }
 .aboutme article h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   text-decoration-line: underline;
   text-decoration-color: hsl(228, 70%, 50%);
