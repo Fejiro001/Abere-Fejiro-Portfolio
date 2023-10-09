@@ -1,0 +1,72 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background-color: rgba(255, 0, 0, 0.233);
+    padding: $nav-horizontal-pad;
+    gap: 5rem;
+}
+
+.aboutme {
+    display: flex;
+    flex-direction: column;
+    // padding: $sections-spacing;
+    // background-color: rgba(255, 0, 0, 0.233);
+
+
+    &__img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 50%;
+
+        img {
+            background-color: $accent-color;
+            width: 60%;
+            border-radius: 50%;
+
+            @media (min-width: $min-width) {
+                width: 80%;
+            }
+        }
+    }
+
+    article {
+        flex: 50%;
+        text-align: center;
+
+        h2 {
+            text-transform: uppercase;
+            @extend %headings;
+            color: $accent-color;
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            @extend %sub-headings;
+            text-decoration-line: underline;
+            text-decoration-color: $accent-color;
+            text-decoration-thickness: 2px;
+            text-decoration-style: wavy;
+            -moz-text-decoration-color: $accent-color;
+            -moz-text-decoration-line: underline;
+            -moz-text-decoration-style: wavy;
+        }
+
+        p {
+            @extend %paragraphs;
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: $min-width) {
+        flex-direction: row;
+    }
+}
