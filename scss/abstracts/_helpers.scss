@@ -11,6 +11,11 @@
     font-weight: 700;
 }
 
+%big-paragraphs {
+    font-family: $ff-paragraphs;
+    font-weight: 500;
+}
+
 %paragraphs {
     font-family: $ff-paragraphs;
     font-weight: 400;
@@ -22,4 +27,18 @@
     text-decoration: none;
     text-transform: uppercase;
     font-size: $nav-links-size;
+}
+
+%call-to-action {
+    text-transform: uppercase;
+    color: $bg-color;
+    @extend %big-paragraphs;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    background-color: $accent-color;
+    border: transparent;
+    padding: 1rem 0;
+    text-align: center;
+    width: clamp(10rem, calc(10 / 50 * 100vw), 10rem);
+    cursor: pointer;
 }

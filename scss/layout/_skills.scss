@@ -1,0 +1,14 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+.skills {
+    @include flex-layout;
+
+    h2 {
+        @include main-heading;
+    }
+
+    h3 {
+        @include sub-heading;
+    }
+}

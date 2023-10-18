@@ -21,7 +21,8 @@
   */
 body {
   height: 100svh;
-  line-height: 1.5;
+  line-height: 1;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   background-color: hsl(0, 0%, 100%);
 }
@@ -65,14 +66,20 @@ h6 {
 /* DARK MODE */
 /* BREAKPOINTS */
 /* PADDINGS */
-.aboutme article h2, .logo-container .logo, .introduction h1, .call-to-action {
+/* FONT SIZES */
+.skills h2, .aboutme article h2, .logo-container .logo, .introduction h1 {
   font-family: "Dosis", sans-serif;
   font-weight: 800;
 }
 
-.aboutme article h3 {
+.skills h3, .aboutme article h3 {
   font-family: "Dosis", sans-serif;
   font-weight: 700;
+}
+
+.introduction button {
+  font-family: "Chivo", sans-serif;
+  font-weight: 500;
 }
 
 .aboutme article p, .introduction p {
@@ -85,10 +92,10 @@ h6 {
   font-family: "Dosis", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: clamp(1.2rem, 1.5vw, 5rem);
+  font-size: clamp(1.2rem, 1vw, 1.5rem);
 }
 
-.call-to-action {
+.introduction button {
   text-transform: uppercase;
   color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
@@ -101,33 +108,40 @@ h6 {
   cursor: pointer;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
 header {
-  padding: clamp(1rem, 2vw, 2rem) 3rem;
+  padding: 1rem 2rem 4rem;
 }
 header section {
-  padding-top: 6rem;
+  margin-top: 3rem;
 }
 
 .introduction {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 .introduction h1 {
-  font-size: clamp(3rem, 10vw, 5rem);
+  font-size: clamp(3rem, 2vw, 4rem);
   text-transform: uppercase;
   -webkit-text-stroke: 3px hsl(237, 88%, 10%);
   color: transparent;
   line-height: 1.2;
+  margin: 10rem 0 1rem;
+  letter-spacing: 2px;
 }
 .introduction h1 span {
   -webkit-text-stroke: transparent;
-  color: hsl(228, 70%, 50%);
+  color: hsl(237, 88%, 10%);
 }
 .introduction p {
-  font-size: clamp(1.3rem, 4vw, 2rem);
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  margin: 0 0 2rem;
+  text-align: left;
 }
-
 nav {
   position: relative;
 }
@@ -145,7 +159,7 @@ nav {
 }
 .logo-container .logo {
   color: hsl(237, 88%, 10%);
-  font-size: clamp(2rem, 3vw, 10rem);
+  font-size: clamp(2rem, 2vw, 4.5rem);
 }
 .logo-container .logo span {
   color: hsl(228, 70%, 50%);
@@ -162,7 +176,7 @@ nav {
 }
 .nav-links li {
   list-style: none;
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 .aside {
   position: absolute;
@@ -175,19 +189,11 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 3rem;
-  gap: 3rem;
+  padding: 4.5rem 2rem 1.5rem;
+  gap: 3.5rem;
 }
 .aside__links li {
   list-style: none;
-}
-@keyframes slidein {
-  from {
-    height: 0;
-  }
-  to {
-    height: 30rem;
-  }
 }
 .aside.show {
   display: block;
@@ -218,7 +224,7 @@ nav {
   width: 100%;
   height: 4px;
   background-color: hsl(237, 88%, 10%);
-  transition: 300ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 .hamburger-menu.active .line:nth-child(1) {
   transform: rotate(45deg);
@@ -240,18 +246,19 @@ nav {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 3rem;
+  justify-content: center;
+  padding: 2rem;
   gap: 5rem;
 }
 
 .aboutme {
   display: flex;
   flex-direction: column;
+  padding-block: 5rem;
+  gap: 2rem;
 }
 .aboutme__img {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,17 +266,21 @@ main {
 }
 .aboutme__img img {
   background-color: hsl(228, 70%, 50%);
-  width: 60%;
+  max-width: 80%;
   border-radius: 50%;
 }
 @media (min-width: 800px) {
-  .aboutme__img img {
-    width: 80%;
+  .aboutme__img {
+    display: block;
   }
 }
 .aboutme article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   flex: 50%;
-  text-align: center;
 }
 .aboutme article h2 {
   text-transform: uppercase;
@@ -279,19 +290,29 @@ main {
 .aboutme article h3 {
   font-size: 2.5rem;
   text-transform: uppercase;
-  text-decoration-line: underline;
-  text-decoration-color: hsl(228, 70%, 50%);
-  text-decoration-thickness: 2px;
-  text-decoration-style: wavy;
-  -moz-text-decoration-color: hsl(228, 70%, 50%);
-  -moz-text-decoration-line: underline;
-  -moz-text-decoration-style: wavy;
 }
 .aboutme article p {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  text-align: justify;
 }
 @media (min-width: 800px) {
   .aboutme {
     flex-direction: row;
   }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.skills h2 {
+  text-transform: uppercase;
+  color: hsl(228, 70%, 50%);
+  font-size: 2rem;
+}
+.skills h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }

@@ -1,36 +1,47 @@
 @use '../abstracts/' as *;
 @use '../base/' as *;
-@use '../components/buttons' as *;
+
+.container {
+    margin: 0 auto;
+    max-width: 1300px;
+}
 
 header {
-    padding: $nav-vertical-pad $nav-horizontal-pad;
+    padding: 1rem $horizontal-pad 4rem;
 
     section {
-        padding-top: 6rem;
+        margin-top: 3rem;
     }
 }
 
 .introduction {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 
     h1 {
         @extend %headings;
-        font-size: clamp(3rem, calc(5 / 50 * 100vw), 5rem);
+        font-size: clamp(3rem, 2vw, 4rem);
         text-transform: uppercase;
         -webkit-text-stroke: 3px $text-color;
         color: transparent;
         line-height: 1.2;
+        margin: 10rem 0 1rem;
+        letter-spacing: 2px;
 
         span {
             -webkit-text-stroke: transparent;
-            color: $accent-color;
+            color: $text-color;
         }
     }
 
     p {
         @extend %paragraphs;
-        font-size: clamp(1.3rem, calc(2/50 * 100vw), 2rem);
+        font-size: clamp(1.3rem, 2vw, 2rem);
+        margin: 0 0 2rem;
+        text-align: left;
+    }
+
+    button {
+        @extend %call-to-action;
     }
 }

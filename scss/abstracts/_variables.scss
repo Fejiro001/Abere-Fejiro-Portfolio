@@ -13,5 +13,8 @@ $text-dark-color: hsla(231, 64%, 98%, 1);
 $min-width: 800px;
 
 /* PADDINGS */
-$nav-vertical-pad: clamp(1rem, 2vw, 2rem);
-$nav-horizontal-pad: 3rem;
+$horizontal-pad: 2rem;
+
+/* FONT SIZES */
+$logo-size:clamp(2rem, 2vw, 4.5rem);
+$nav-links-size: clamp(1.2rem, 1vw, 1.5rem);

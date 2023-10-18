@@ -19,7 +19,9 @@
   */
 body {
     height: 100svh;
-    line-height: 1.5;
+    // made line height fit font size
+    line-height: 1;
+    margin: 0;
     -webkit-font-smoothing: antialiased;
     background-color: hsl(0, 0%, 100%);
 }
