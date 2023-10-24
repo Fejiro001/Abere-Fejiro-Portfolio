@@ -22,7 +22,7 @@ header {
         @extend %headings;
         font-size: clamp(3rem, 2vw, 4rem);
         text-transform: uppercase;
-        -webkit-text-stroke: 3px $text-color;
+        -webkit-text-stroke: 1.5px $text-color;
         color: transparent;
         line-height: 1.2;
         margin: 10rem 0 1rem;
@@ -35,8 +35,7 @@ header {
     }
 
     p {
-        @extend %paragraphs;
-        font-size: clamp(1.3rem, 2vw, 2rem);
+        @include paragraph(clamp(1.3rem, 2vw, 2rem));
         margin: 0 0 2rem;
         text-align: left;
     }

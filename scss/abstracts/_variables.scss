@@ -1,13 +1,13 @@
 /* LIGHT MODE */
 $bg-color: hsla(0, 0%, 100%, 1);
-$primary-color: hsla(228, 71%, 80%, 1);
-$accent-color: hsla(228, 70%, 50%, 1);
-$text-color: hsla(237, 88%, 10%, 1);
+// $primary-color: hsla(228, 71%, 80%, 1);
+$primary-color: hsla(228, 70%, 50%, 1);
+// $text-color: hsla(237, 88%, 10%, 1);
+$text-color: hsla(231, 64%, 98%, 1);
 
 /* DARK MODE */
 $bg-dark-color: hsla(248, 100%, 6%, 1);
 $primary-dark-color: hsla(228, 71%, 20%, 1);
-$text-dark-color: hsla(231, 64%, 98%, 1);
 
 /* BREAKPOINTS */
 $min-width: 800px;

@@ -22,7 +22,7 @@ nav {
         font-size: $logo-size;
 
         span {
-            color: $accent-color;
+            color: $primary-color;
         }
     }
 }
@@ -47,7 +47,7 @@ nav {
 
 .aside {
     position: absolute;
-    background-color: $bg-color;
+    background-color: $bg-dark-color;
     display: none;
     width: 100%;
 

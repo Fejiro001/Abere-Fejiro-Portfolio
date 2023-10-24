@@ -1,3 +1,5 @@
+// @use '../abstracts/' as *;
+
 /*
     1. Use a more-intuitive box-sizing model.
 */
@@ -23,7 +25,8 @@ body {
     line-height: 1;
     margin: 0;
     -webkit-font-smoothing: antialiased;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsla(248, 100%, 6%, 1);
+    scroll-behavior: smooth;
 }
 /*
     5. Improve media defaults

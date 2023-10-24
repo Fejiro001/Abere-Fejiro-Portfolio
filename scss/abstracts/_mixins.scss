@@ -1,9 +1,10 @@
 @use './variables' as *;
+@use '../base/' as *;
 
 @mixin main-heading {
     text-transform: uppercase;
     @extend %headings;
-    color: $accent-color;
+    color: $primary-color;
     font-size: 2rem;
 }
 
@@ -13,9 +14,17 @@
     @extend %sub-headings;
 }
 
-@mixin flex-layout {
+@mixin paragraph($font-size) {
+    font-family: $ff-paragraphs;
+    font-weight: 400;
+    color: $text-color;
+    font-size: $font-size;
+}
+
+@mixin flex-layout($gap) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: $gap;
 }
